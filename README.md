@@ -62,6 +62,6 @@ In Order To USe Login You Need To Register A User First If Using For First Time
 
 ## License
 
-This project is licensed under the [MIT](LICENSE.md)
+This project is licensed under the [MIT-LICENSE](LICENSE.md)
 
 
