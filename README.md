@@ -45,6 +45,25 @@ For Default Mysql Installation Remove The Port Attribute From Code
 
     con=p.connect(host="localhost",user="root",password="yourpassword",port=8000,database="CityHospital")
 
+### OTP Validation Via Gmail 
+
+Establishe A Connection Between Python And Gmail Smtp,Replace The test@gmail.com Field With Your Email The One With Which You Want To Send The OTP Emails And $${\color{blue}test}$$
+ field With The App Password You Created In Your Google Account 
+
+    server.login("test@gmail.com","test")
+    
+Replace The Test With Your Email Id With Which You Want To Send OTP Emails  
+       
+            msg["From"]="test"
+
+### OTP Validation Via Any Other Email Service 
+
+To Use Your Own Preferd Email Service Please Update The Following Line Of Code 
+            
+            server=smtplib.SMTP("test.smtp.server",[port])
+            server.login("test@gmail.com","test")
+            msg["From"]="test"
+    
 In Order To USe Login You Need To Register A User First If Using For First Time 
 
 
