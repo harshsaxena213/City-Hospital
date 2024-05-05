@@ -8,13 +8,14 @@ def register():
     print("****Register*****\n")
     username_new=input("Enter The New Username For Your Account\n")
     password_new=input(f"Enter The Password For {username_new} \n")
+    email=input("Enter Your Email Id \n Note :- Your Email Id Will Be Used In Future For Login ")
     query_check_avail="select password from users where usernmae='{}'".format(username_new)
     cur.execute(query_check_avail)
     z=cur.fetchall()
     if(z!=[]):
         print("The Entered Username Is Not Available Please Enter Any Other Username")
     else:
-        query_insert="insert into users values('{}','{}')".format(username_new,password_new)
+        query_insert="insert into users values('{}','{}','{}')".format(username_new,password_new,email)
         cur.execute(query_insert)
         con.commit()
         print(f"You Are Successfully Registered Yourself With City Hospital\nYour Credentials Are\nUsername :- {username_new}\nPassword :-{password_new}")
